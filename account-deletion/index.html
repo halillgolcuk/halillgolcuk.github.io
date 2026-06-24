@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VocaSwipe Hesap ve Veri Silme</title>
+    <meta
+      name="description"
+      content="VocaSwipe hesabınızı ve ilişkili öğrenme verilerinizi kalıcı olarak silme adımları."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --bg: #f6f7fb;
+        --surface: #ffffff;
+        --text: #171821;
+        --muted: #62697a;
+        --line: #dde2f0;
+        --brand: #5868d9;
+        --brand-dark: #3340a6;
+        --accent: #13a6b2;
+        --danger: #d9485f;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at 10% 0%, rgba(19, 166, 178, 0.14), transparent 28%),
+          radial-gradient(circle at 90% 4%, rgba(88, 104, 217, 0.16), transparent 30%),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.65;
+      }
+
+      a {
+        color: var(--brand-dark);
+        font-weight: 750;
+      }
+
+      .hero {
+        padding: 54px 20px 92px;
+        background: linear-gradient(135deg, #171a33 0%, #3944aa 56%, #13a6b2 100%);
+        color: #fff;
+      }
+
+      .hero-inner,
+      main {
+        width: min(880px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        font-weight: 850;
+      }
+
+      .brand-mark {
+        display: grid;
+        place-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+        background: #fff;
+        color: var(--brand);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+      }
+
+      h1 {
+        max-width: 720px;
+        margin: 28px 0 12px;
+        font-size: clamp(36px, 7vw, 64px);
+        line-height: 1.02;
+      }
+
+      .hero p {
+        max-width: 660px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.84);
+        font-size: 18px;
+      }
+
+      main {
+        position: relative;
+        margin-top: -48px;
+        padding-bottom: 60px;
+      }
+
+      .card {
+        margin-bottom: 18px;
+        padding: clamp(24px, 5vw, 42px);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 18px 50px rgba(20, 25, 48, 0.11);
+      }
+
+      .eyebrow {
+        color: var(--brand);
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin: 7px 0 14px;
+        font-size: clamp(25px, 4vw, 34px);
+        line-height: 1.15;
+      }
+
+      h3 {
+        margin: 26px 0 8px;
+        font-size: 19px;
+      }
+
+      p,
+      li {
+        color: var(--muted);
+      }
+
+      ol,
+      ul {
+        margin: 12px 0 0;
+        padding-left: 24px;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      .notice {
+        margin-top: 22px;
+        padding: 16px 18px;
+        border-left: 4px solid var(--accent);
+        border-radius: 13px;
+        background: #effcff;
+        color: #285c65;
+      }
+
+      .delete-notice {
+        border-left-color: var(--danger);
+        background: #fff1f3;
+        color: #7b3340;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        margin-top: 16px;
+        padding: 11px 18px;
+        border-radius: 14px;
+        background: var(--brand);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 850;
+        box-shadow: 0 12px 28px rgba(88, 104, 217, 0.28);
+      }
+
+      footer {
+        padding: 0 20px 36px;
+        color: var(--muted);
+        text-align: center;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="brand">
+          <div class="brand-mark">VS</div>
+          <span>VocaSwipe</span>
+        </div>
+        <h1>Hesap ve veri silme</h1>
+        <p>
+          VocaSwipe hesabınızı ve hesabınıza bağlı öğrenme verilerini kalıcı olarak silmek için aşağıdaki
+          yöntemlerden birini kullanabilirsiniz.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <div class="eyebrow">En hızlı yöntem</div>
+        <h2>Uygulama içinden hesabı silme</h2>
+        <ol>
+          <li>VocaSwipe uygulamasını açın ve hesabınıza giriş yapın.</li>
+          <li><strong>Profil</strong> ekranını açın.</li>
+          <li><strong>Hesabı Yönet</strong> seçeneğine dokunun.</li>
+          <li><strong>Hesabımı Sil</strong> seçeneğini seçin.</li>
+          <li>Gösterilen iki onay adımını tamamlayın.</li>
+        </ol>
+        <p class="notice delete-notice">
+          Bu işlem geri alınamaz. Onaydan sonra hesabınız ve ilişkili uygulama verileriniz kalıcı olarak silinir.
+        </p>
+      </section>
+
+      <section class="card">
+        <div class="eyebrow">Uygulamaya erişemiyorsanız</div>
+        <h2>E-posta ile silme talebi</h2>
+        <p>
+          Hesabınıza giriş yapamıyorsanız kayıtlı kullanıcı adınızı belirterek bize e-posta gönderebilirsiniz.
+          Güvenliğiniz için şifrenizi e-postaya yazmayın. Hesap sahipliğini doğrulamak için ek bilgi isteyebiliriz.
+        </p>
+        <a
+          class="button"
+          href="mailto:golcukhalil@outlook.com?subject=VocaSwipe%20Hesap%20Silme%20Talebi&body=VocaSwipe%20kullan%C4%B1c%C4%B1%20ad%C4%B1m%3A%20%0A%0AHesab%C4%B1m%C4%B1n%20ve%20ili%C5%9Fkili%20verilerimin%20silinmesini%20talep%20ediyorum."
+        >
+          Silme talebi gönder
+        </a>
+        <p class="notice">
+          E-posta ile iletilen doğrulanmış talepler mümkün olan en kısa sürede ve en geç 30 gün içinde işleme alınır.
+        </p>
+      </section>
+
+      <section class="card">
+        <div class="eyebrow">Silinen bilgiler</div>
+        <h2>Hangi veriler silinir?</h2>
+        <ul>
+          <li>VocaSwipe kimlik doğrulama hesabı ve dahili kullanıcı kimliği</li>
+          <li>Kullanıcı adı, avatar, seviye ve profil tercihleri</li>
+          <li>Test oturumları ve kelime bazlı cevap sonuçları</li>
+          <li>Kelime ilerlemesi, öğrenilen ve zayıf kelime kayıtları</li>
+          <li>Genel, seviye ve oyun modu istatistikleri</li>
+          <li>Rozetler, günlük seri ve enerji bilgileri</li>
+        </ul>
+
+        <h3>Saklanabilecek sınırlı kayıtlar</h3>
+        <p>
+          Hesabın aktif uygulama verileri silinir. Güvenlik, sahtekârlığı önleme, reklam ölçümü ve hata tanılama
+          amacıyla üçüncü taraf hizmet sağlayıcılarda oluşmuş teknik kayıtlar, ilgili sağlayıcının saklama
+          ayarlarına göre sınırlı bir süre tutulabilir. Analitik etkinlik verileri en fazla 14 ay saklanabilir.
+          Bu kayıtlar silinen hesabı veya öğrenme ilerlemesini yeniden oluşturmak için kullanılmaz.
+        </p>
+        <p>
+          Yasal bir zorunluluk doğmadıkça VocaSwipe, silinen hesabın profil ve öğrenme verilerini ayrıca saklamaz.
+        </p>
+      </section>
+
+      <section class="card">
+        <div class="eyebrow">İletişim</div>
+        <h2>Yardıma mı ihtiyacınız var?</h2>
+        <p>
+          Hesap veya veri silme süreciyle ilgili sorularınız için
+          <a href="mailto:golcukhalil@outlook.com">golcukhalil@outlook.com</a> adresinden bize ulaşabilirsiniz.
+        </p>
+        <p>
+          Ayrıntılı bilgi için <a href="/vocaswipe-privacy-policy/">VocaSwipe Gizlilik Politikası</a>'nı inceleyin.
+        </p>
+      </section>
+    </main>
+
+    <footer>© 2026 VocaSwipe · Son güncelleme: 24 Haziran 2026</footer>
+  </body>
+</html>
