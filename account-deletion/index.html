@@ -150,19 +150,13 @@
         color: #7b3340;
       }
 
-      .button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 48px;
-        margin-top: 16px;
-        padding: 11px 18px;
-        border-radius: 14px;
-        background: var(--brand);
-        color: #fff;
-        text-decoration: none;
+      .email-address {
+        display: inline-block;
+        margin-top: 8px;
+        color: var(--brand-dark);
+        font-size: 18px;
         font-weight: 850;
-        box-shadow: 0 12px 28px rgba(88, 104, 217, 0.28);
+        overflow-wrap: anywhere;
       }
 
       footer {
@@ -211,12 +205,7 @@
           Hesabınıza giriş yapamıyorsanız kayıtlı kullanıcı adınızı belirterek bize e-posta gönderebilirsiniz.
           Güvenliğiniz için şifrenizi e-postaya yazmayın. Hesap sahipliğini doğrulamak için ek bilgi isteyebiliriz.
         </p>
-        <a
-          class="button"
-          href="mailto:golcukhalil@outlook.com?subject=VocaSwipe%20Hesap%20Silme%20Talebi&body=VocaSwipe%20kullan%C4%B1c%C4%B1%20ad%C4%B1m%3A%20%0A%0AHesab%C4%B1m%C4%B1n%20ve%20ili%C5%9Fkili%20verilerimin%20silinmesini%20talep%20ediyorum."
-        >
-          Silme talebi gönder
-        </a>
+        <p class="email-address">golcukhalil@outlook.com</p>
         <p class="notice">
           E-posta ile iletilen doğrulanmış talepler mümkün olan en kısa sürede ve en geç 30 gün içinde işleme alınır.
         </p>
